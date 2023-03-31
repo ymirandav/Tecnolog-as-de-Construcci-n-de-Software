@@ -1,0 +1,48 @@
+mutation {
+  addCliente( nombre:"Yoshiro", telefono:"961320273", DNI:"77207344") {
+    id
+    nombre
+    telefono
+    DNI	
+  }
+}
+
+mutation {
+  addCliente( nombre:"Carlos", telefono:"973159114", DNI:"78234512") {
+    id
+    nombre
+    telefono
+    DNI
+  }
+}
+
+{
+  clientes {
+    id
+    nombre
+    telefono
+    DNI
+  }
+}
+
+{
+  cliente(id: 1) {
+    id
+    nombre
+    telefono
+    DNI
+  }
+}
+
+mutation{
+  updateCliente(id:1, nombre:"carlos", telefono:"123123123", DNI:"32133213123"){
+    id
+    nombre
+    telefono
+  }
+}
+
+mutation {
+  deleteCliente(id:1)
+}
+
